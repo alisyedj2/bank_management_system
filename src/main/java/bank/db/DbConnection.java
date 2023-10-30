@@ -10,8 +10,8 @@ public class DbConnection {
 		Connection con=null;
 	
 		try {
-			Class.forName("oracle.jdbc.OracleDriver");
-			con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","System","123456789");
+			Class.forName("com.mysql.jdbc.Driver");
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/sonoo","root","root");
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
